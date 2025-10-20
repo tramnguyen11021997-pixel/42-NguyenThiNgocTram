@@ -36,3 +36,34 @@ def print_student_list():
         for student in student_list:
             print(f" - Ten: {student['name']}, Nam sinh: {student['year_of_birth']}, Dia chi: {student['address']}")
 
+
+def search_student(search_name):
+    print("\n--- KẾT QUẢ TÌM KIẾM ---")
+    found = []
+
+    for student in student_list:
+        if search_name.lower() in student['name'].lower():
+            found.append(student)
+
+    if not found:
+        print("Không tìm thấy sinh viên nào.")
+    else:
+        for student in found:
+            print(f"→ Tên: {student['name']}, Năm sinh: {student['year_of_birth']}, Địa chỉ: {student['address']}")
+
+
+if __name__ == "__main__":
+    print("\n--- CHƯƠNG TRÌNH QUẢN LÝ SINH VIÊN ---")
+
+    # Yêu cầu 1: Thêm sinh viên
+    add_student("Nguyen Van An", 2003, "Da Nang")
+    add_student("Tran Thi Binh", 2002, "Quang Nam")
+    add_student("Le Van Hung", 2003, "Hue")
+
+    # Yêu cầu 2: In danh sách sinh viên
+    print("\nDanh sách sinh viên:")
+    print_student_list()
+
+    # Yêu cầu 3: Tìm kiếm sinh viên
+    print("\nKết quả tìm kiếm theo tên 'an':")
+    search_student("an")
