@@ -25,3 +25,14 @@ if __name__ == "__main__":
     add_student("Nguyen Van An", 2003, "Da Nang")
     add_student("Tran Thi Binh", 2002, "Quang Nam")
     add_student("Le Van Hung", 2003, "Hue")
+
+
+
+def print_student_list():
+    print("--- DANH SACH SINH VIEN ---")
+    if not student_list:
+        print("Danh sach trong.")
+    else:
+        for student in student_list:
+            print(f" - Ten: {student['name']}, Nam sinh: {student['year_of_birth']}, Dia chi: {student['address']}")
+
