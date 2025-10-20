@@ -27,6 +27,7 @@ if __name__ == "__main__":
     add_student("Le Van Hung", 2003, "Hue")
 
 
+
 def print_student_list():
     print("--- DANH SACH SINH VIEN ---")
     if not student_list:
@@ -34,3 +35,4 @@ def print_student_list():
     else:
         for student in student_list:
             print(f" - Ten: {student['name']}, Nam sinh: {student['year_of_birth']}, Dia chi: {student['address']}")
+
