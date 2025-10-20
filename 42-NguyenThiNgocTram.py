@@ -1,5 +1,7 @@
 # 42-NguyenThiNgocTram.py
 # Ứng dụng Quản lý Sinh viên
+# Cap nhat lan 2 - test pull request
+
 
 # Danh sách để lưu thông tin các sinh viên.
 # Mỗi sinh viên là một dictionary.
